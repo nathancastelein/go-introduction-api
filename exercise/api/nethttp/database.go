@@ -18,7 +18,3 @@ func (p petRepository) SelectOnePet(id int) (*shelter.Pet, error) {
 func (p petRepository) UpdatePetName(id int, newName string) error {
 	return bob.UpdatePetName(id, newName)
 }
-
-func newPetRepository() shelter.PetRepository {
-	return &petRepository{}
-}

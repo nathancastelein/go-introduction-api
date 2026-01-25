@@ -24,33 +24,32 @@ go-introduction-api/
 
 ## Exercise Order
 
-### FizzBuzz Exercises (Introduction)
+### Pet Exercises (Introduction)
 
-| Exercise         | File                              | Description                             |
-| ---------------- | --------------------------------- | --------------------------------------- |
-| FizzBuzz Basic   | `exercise/fizzbuzz/fizzbuzz.go`   | Implement the classic FizzBuzz function |
-| FizzBuzz Multi   | `exercise/fizzbuzz/multi.go`      | Process a slice of numbers              |
-| FizzBuzz Map     | `exercise/fizzbuzz/multimap.go`   | Return results as a map                 |
-| FizzBuzz Struct  | `exercise/fizzbuzz/fizzstruct.go` | Use structs and methods                 |
-| FizzBuzz Handler | `exercise/fizzbuzz/server.go`     | HTTP handler for FizzBuzz               |
-
-### API/NetHTTP Exercises
-
-| Exercise        | File                               | Description                |
-| --------------- | ---------------------------------- | -------------------------- |
-| Database Setup  | `exercise/api/nethttp/database.go` | Set up database connection |
-| Request Reading | `exercise/api/nethttp/request.go`  | Read from HTTP request     |
-| Result Writing  | `exercise/api/nethttp/result.go`   | Write JSON responses       |
-| List Handler    | `exercise/api/nethttp/list.go`     | List all pets endpoint     |
-| Get By ID       | `exercise/api/nethttp/getById.go`  | Get single pet endpoint    |
-| Update Handler  | `exercise/api/nethttp/update.go`   | Update pet endpoint        |
+| Exercise          | File                          | Description                             |
+| ----------------- | ----------------------------- | --------------------------------------- |
+| Categorize Age    | `exercise/pets/categorize.go` | Categorize pet age (Puppy/Adult/Senior) |
+| Filter Adult Ages | `exercise/pets/slice.go`      | Filter ages in the Adult range          |
+| Count by Category | `exercise/pets/map.go`        | Count occurrences using maps            |
+| Pet Info Struct   | `exercise/pets/petstruct.go`  | Use structs and methods                 |
 
 ### Database Exercises
 
-| Exercise    | File                               | Description                      |
-| ----------- | ---------------------------------- | -------------------------------- |
-| SQL Select  | `exercise/database/sql/select.go`  | SELECT queries with database/sql |
-| SQLx Select | `exercise/database/sqlx/select.go` | SELECT queries with sqlx         |
+| Exercise   | File                              | Description                      |
+| ---------- | --------------------------------- | -------------------------------- |
+| SQL Select | `exercise/database/sql/select.go` | SELECT queries with database/sql |
+
+### API/NetHTTP Exercises
+
+| Exercise        | File                              | Description             |
+| --------------- | --------------------------------- | ----------------------- |
+| Result Writing  | `exercise/api/nethttp/result.go`  | Write JSON responses    |
+| Request Reading | `exercise/api/nethttp/request.go` | Read from HTTP request  |
+| List Handler    | `exercise/api/nethttp/list.go`    | List all pets endpoint  |
+| Get By ID       | `exercise/api/nethttp/getById.go` | Get single pet endpoint |
+| Update Handler  | `exercise/api/nethttp/update.go`  | Update pet endpoint     |
+
+
 
 ## Running Tests
 
@@ -58,7 +57,7 @@ go-introduction-api/
 
 ```bash
 # Test a specific exercise
-go test ./exercise/fizzbuzz/... -run ^TestShouldReturnSameNumber$
+go test ./exercise/pets/... -run ^TestCategorizeAge$
 
 # Test all exercises (will fail until implemented)
 go test ./exercise/...
