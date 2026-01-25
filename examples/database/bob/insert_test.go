@@ -1,0 +1,30 @@
+package bob
+
+import (
+	"testing"
+
+	"github.com/nathancastelein/go-introduction-api/shelter"
+)
+
+func TestInsert(t *testing.T) {
+	// Arrange
+
+	// Act
+	pet, err := InsertNewPet(shelter.Pet{
+		Name:     "Medor",
+		Category: "Dog",
+	})
+
+	// Assert
+	if err != nil {
+		t.Fatalf("err = %s; want nil", err)
+	}
+
+	if pet.Id == 0 {
+		t.Fatal("pet is nil; want not nil")
+	}
+
+	if pet.Id == 0 {
+		t.Fatalf("pet id is %d; want not zero", pet.Id)
+	}
+}

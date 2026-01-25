@@ -1,0 +1,20 @@
+package fizzbuzz
+
+type FizzBuzz struct {
+	number int
+	result string
+}
+
+func NewFizzBuzz(number int) *FizzBuzz {
+	return &FizzBuzz{
+		number: number,
+	}
+}
+
+func (f FizzBuzz) String() string {
+	return f.result
+}
+
+func (f *FizzBuzz) Compute() {
+	// TODO: implement using fizzbuzz function
+}
