@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo/v4"
-	"github.com/nathancastelein/go-course-api/solution/database/sqlboiler"
+	"github.com/nathancastelein/go-introduction-api/examples/database/bob"
 )
 
 type Pet struct {
@@ -15,7 +15,7 @@ type Pet struct {
 
 func ListPetsHandler(c echo.Context) error {
 	// Get all pets
-	_, _ = sqlboiler.SelectAllPets()
+	_, _ = bob.SelectAllPets()
 
 	// Return http.InternalServerError with "internal server error" string in case of error
 	// Return JSON

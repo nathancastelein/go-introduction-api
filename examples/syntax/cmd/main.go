@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/nathancastelein/go-course-introduction/syntax"
+	"github.com/nathancastelein/go-introduction-api/examples/syntax"
 )
 
 func main() {

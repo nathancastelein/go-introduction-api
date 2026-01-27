@@ -3,7 +3,7 @@ package database
 import (
 	"errors"
 
-	"github.com/nathancastelein/go-course-api/database/connect"
+	"github.com/nathancastelein/go-introduction-api/examples/database/connect"
 )
 
 func SimpleQuery() (bool, error) {
