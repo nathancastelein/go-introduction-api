@@ -53,6 +53,6 @@ func TestListPetsHandler(t *testing.T) {
 		require.Equal(http.StatusInternalServerError, response.Result().StatusCode, "invalid HTTP status code received")
 		body, err := io.ReadAll(response.Body)
 		require.NoError(err, "fail to read response body")
-		require.Equal(`an error message`, string(body), "invalid response body received")
+		require.Equal(`{"error": "an error message"}`, string(body), "invalid response body received")
 	})
 }
