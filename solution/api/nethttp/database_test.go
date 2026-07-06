@@ -58,7 +58,7 @@ type petRepositoryStubError struct {
 }
 
 func (p petRepositoryStubError) SelectAllPets() ([]shelter.Pet, error) {
-	return nil, errors.New("an error message")
+	return nil, errors.New("failed to list pets")
 }
 
 func (p petRepositoryStubError) SelectOnePet(id int) (*shelter.Pet, error) {

@@ -6,7 +6,7 @@ import (
 
 func HelloWorld(w http.ResponseWriter, req *http.Request) {
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("Hello World!\n"))
+	w.Write([]byte(`{"hello": "world"}`))
 }
 
 func main() {
